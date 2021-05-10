@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ch10_lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IJg-55-3Pr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyx-xN-GfP">
+                                        <rect key="frame" x="128" y="0.0" width="158" height="197"/>
+                                        <state key="normal" title="Goto Other With Direct"/>
+                                        <connections>
+                                            <action selector="gotowithDirect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Imz-j8-dH0"/>
+                                            <segue destination="eC2-Bh-cKu" kind="presentation" identifier="ghpark" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="w3B-0a-hcG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRa-4n-Q2L">
+                                        <rect key="frame" x="130" y="207" width="154" height="197"/>
+                                        <state key="normal" title="Goto other with Segue"/>
+                                        <connections>
+                                            <action selector="gotowithSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qS2-U8-Ldd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOJ-oU-ggp">
+                                        <rect key="frame" x="122.5" y="414" width="169" height="197"/>
+                                        <state key="normal" title="Goto Other With Present"/>
+                                        <connections>
+                                            <action selector="gotowithPresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IPO-rq-Rbh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOC-zS-nfu">
+                                        <rect key="frame" x="132" y="621" width="150" height="197"/>
+                                        <state key="normal" title="Goto Other With Push"/>
+                                        <connections>
+                                            <action selector="gotowithPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZIL-eU-fsH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IJg-55-3Pr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A9C-Lb-9bH"/>
+                            <constraint firstItem="IJg-55-3Pr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dws-pS-V8p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IJg-55-3Pr" secondAttribute="bottom" id="gwZ-h5-mqN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IJg-55-3Pr" secondAttribute="trailing" id="zGm-qA-RE3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+        <!--Other View Controller-->
+        <scene sceneID="etO-Ab-sHP">
+            <objects>
+                <viewController storyboardIdentifier="otherId" id="eC2-Bh-cKu" customClass="OtherViewController" customModule="ch10_lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xLe-zh-JaS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLz-ah-sgI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Back Again"/>
+                                <connections>
+                                    <action selector="goBackAgain:" destination="eC2-Bh-cKu" eventType="touchUpInside" id="4F7-Bs-qkl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r2c-Fa-WM0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eLz-ah-sgI" firstAttribute="leading" secondItem="r2c-Fa-WM0" secondAttribute="leading" id="5oj-zf-f9k"/>
+                            <constraint firstItem="eLz-ah-sgI" firstAttribute="top" secondItem="r2c-Fa-WM0" secondAttribute="top" id="eth-xu-zJR"/>
+                            <constraint firstItem="r2c-Fa-WM0" firstAttribute="trailing" secondItem="eLz-ah-sgI" secondAttribute="trailing" id="j7a-m6-8hj"/>
+                            <constraint firstItem="r2c-Fa-WM0" firstAttribute="bottom" secondItem="eLz-ah-sgI" secondAttribute="bottom" id="lBi-qo-K2B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3WZ-gd-y0T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hg3-mW-L7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
