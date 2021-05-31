@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_692163_termproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="XiB-3I-AUX" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XiB-3I-AUX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ANp-YO-Lx6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XiB-3I-AUX" secondAttribute="trailing" id="qHK-kS-XuP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XiB-3I-AUX" secondAttribute="bottom" id="rqm-tC-abJ"/>
+                            <constraint firstItem="XiB-3I-AUX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tHC-4a-adv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendar" destination="XiB-3I-AUX" id="9CE-yy-ogH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+        <!--일정-->
+        <scene sceneID="LfX-zm-1zu">
+            <objects>
+                <viewController storyboardIdentifier="DateViewController" id="GUx-rE-9la" customClass="DateViewController" customModule="_692163_termproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KAL-1C-8CZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mir-RP-6jW">
+                                <rect key="frame" x="8" y="159" width="398" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="703" id="AJJ-bn-Noz"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="H1d-tn-65a" customClass="cell">
+                                        <rect key="frame" x="0.0" y="24.5" width="398" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H1d-tn-65a" id="sIR-Nt-T7c">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일정 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVV-ga-sQ4">
+                                <rect key="frame" x="8" y="115.5" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-kG-zOJ">
+                                <rect key="frame" x="55" y="109" width="351" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="w4a-1Q-mRd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mir-RP-6jW" firstAttribute="leading" secondItem="w4a-1Q-mRd" secondAttribute="leading" constant="8" id="2dH-8o-AaI"/>
+                            <constraint firstItem="mir-RP-6jW" firstAttribute="top" secondItem="Kww-kG-zOJ" secondAttribute="bottom" constant="16" id="8hX-z3-S4m"/>
+                            <constraint firstItem="w4a-1Q-mRd" firstAttribute="trailing" secondItem="mir-RP-6jW" secondAttribute="trailing" constant="8" id="A6s-Zf-SMC"/>
+                            <constraint firstItem="ZVV-ga-sQ4" firstAttribute="leading" secondItem="w4a-1Q-mRd" secondAttribute="leading" constant="8" id="OTz-ep-rlF"/>
+                            <constraint firstItem="Kww-kG-zOJ" firstAttribute="centerY" secondItem="ZVV-ga-sQ4" secondAttribute="centerY" id="Usz-ki-J4M"/>
+                            <constraint firstItem="w4a-1Q-mRd" firstAttribute="trailing" secondItem="Kww-kG-zOJ" secondAttribute="trailing" constant="8" id="X6V-PU-S9b"/>
+                            <constraint firstItem="w4a-1Q-mRd" firstAttribute="bottom" secondItem="mir-RP-6jW" secondAttribute="bottom" id="sLJ-vg-7pl"/>
+                            <constraint firstItem="Kww-kG-zOJ" firstAttribute="leading" secondItem="ZVV-ga-sQ4" secondAttribute="trailing" constant="8" id="tqC-Ed-eoC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="일정" id="DEA-YT-3pb">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="8eU-QV-e6l">
+                            <connections>
+                                <action selector="EditTable:" destination="GUx-rE-9la" id="u8O-dY-n0Y"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X4V-g1-zPg">
+                            <connections>
+                                <action selector="AddTable:" destination="GUx-rE-9la" id="Iq1-RN-ZyF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ScheduleName" destination="Kww-kG-zOJ" id="iD1-O0-NUc"/>
+                        <outlet property="dateTableView" destination="mir-RP-6jW" id="H0i-Mb-M1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0y-yy-8rh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437.68115942029" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q8i-uc-YeF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UuQ-BK-jsP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ok-ja-kxc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GUx-rE-9la" kind="relationship" relationship="rootViewController" id="2yn-eB-Bng"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Elh-4X-mmx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
